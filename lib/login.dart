@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:safe_house_app/UserProfile.dart';
 import 'signup.dart';
 
 // void main() {
@@ -48,7 +49,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   void submitForm() {
     if (formKey.currentState!.validate() == true) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Userprofile()));
     }
   }
 
@@ -167,7 +169,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   const Text('Do not have an account?'),
                   TextButton(
                     child: const Text(
-                      'Sign in',
+                      'Sign Up',
                       style: TextStyle(fontSize: 15),
                     ),
                     onPressed: () {
