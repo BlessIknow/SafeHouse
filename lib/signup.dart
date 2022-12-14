@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:safe_house_app/login.dart';
+import 'createProfile.dart';
 
 // void main() {
 //   runApp(Signup());
@@ -49,7 +50,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   void submitForm() {
     if (formKey.currentState!.validate() == true) {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => Signup()));
+          context, MaterialPageRoute(builder: (context) => CreatProfile()));
     }
   }
 
