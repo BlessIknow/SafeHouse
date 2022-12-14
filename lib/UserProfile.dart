@@ -1,18 +1,35 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
+import 'package:safe_house_app/welcome.dart';
+import 'AddApartment.dart';
 
-void main() {
-  runApp(MyApp());
-}
+// void main() {
+//   runApp(Userprofile());
+// }
 
-class MyApp extends StatelessWidget {
+class Userprofile extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+      ),
       title: 'User Profile',
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(80, 230, 85, 1),
+          automaticallyImplyLeading: true,
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => WelcomeScreen()));
+            },
+            child: Icon(
+              Icons.arrow_back, // add custom icons also
+            ),
+          ),
           title: Center(
             child: const Text('User Profile'),
           ),
@@ -23,6 +40,7 @@ class MyApp extends StatelessWidget {
               height: 250,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
+                  // ignore: prefer_const_literals_to_create_immutables
                   colors: [
                     Color.fromARGB(255, 243, 241, 241),
                     Color.fromARGB(255, 243, 240, 239)
@@ -61,30 +79,46 @@ class MyApp extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  Text(
-                    'Full Name',
-                    style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 600, 0),
+                    child: Text(
+                      'Joseph Lee',
+                      style: TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 59, 55, 55),
+                      ),
                     ),
                   ),
-                  Text(
-                    'Adventure Seeker',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 25,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 600, 0),
+                    child: Text(
+                      'Adventure Seeker',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 59, 55, 55),
+                        fontSize: 25,
+                      ),
                     ),
                   ),
                 ],
               ),
+            ),
+            MaterialButton(
+              onPressed: (() {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AddAppartment()));
+              }),
+              // ignore: sort_child_properties_last
+              child: Text("Add Apartment"),
+              color: Colors.white,
+              textColor: Colors.teal,
             ),
             Container(
               child: Row(
                 children: <Widget>[
                   Expanded(
                     child: Container(
-                      color: Colors.deepOrange.shade300,
+                      color: Color.fromARGB(255, 35, 175, 236),
                       child: ListTile(
                         title: Text(
                           '0000',
@@ -108,7 +142,7 @@ class MyApp extends StatelessWidget {
                   ),
                   Expanded(
                     child: Container(
-                      color: Colors.red,
+                      color: Color.fromARGB(255, 174, 104, 99),
                       child: ListTile(
                         title: Text(
                           '0000',
@@ -140,13 +174,13 @@ class MyApp extends StatelessWidget {
                     title: Text(
                       'Email Address',
                       style: TextStyle(
-                        color: Colors.deepOrange,
+                        color: Color.fromARGB(255, 0, 0, 0),
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     subtitle: Text(
-                      'xxxxxxxx@gmail.com',
+                      'Josephlee@gmail.com',
                       style: TextStyle(
                         fontSize: 18,
                       ),
@@ -157,7 +191,7 @@ class MyApp extends StatelessWidget {
                     title: Text(
                       'Location',
                       style: TextStyle(
-                        color: Colors.deepOrange,
+                        color: Color.fromARGB(255, 0, 0, 0),
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
@@ -174,7 +208,7 @@ class MyApp extends StatelessWidget {
                     title: Text(
                       'Nationality',
                       style: TextStyle(
-                        color: Colors.deepOrange,
+                        color: Color.fromARGB(255, 0, 0, 0),
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
