@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -20,7 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.2 <3.0.0'
+  sdk: ">=2.18.2 <3.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -31,19 +31,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  image_picker_web: ^2.1.1
 
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flip_card: ^0.6.0
+
+  video_player: ^2.4.8
+  vimeoplayer_trinity: ^0.2.3
 
 dev_dependencies:
- flutter_launcher_icons: ^0.11.0
-   
- flutter_test:
-    sdk: flutter
+  flutter_launcher_icons: ^0.11.0
 
- flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.0
+
+  flutter_test:
+    sdk: flutter
 
 flutter:
   uses-material-design: true
@@ -65,3 +67,7 @@ flutter_icons:
   macos:
     generate: true
     image_path: "Images/Safe House logo.png"
+assets:
+  - images/video.mp4
+  - images/logo.png
+  - images/blacked.png
