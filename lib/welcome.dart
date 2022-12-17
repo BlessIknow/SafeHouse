@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'FAQ.dart';
 
 // void main() => runApp(Welcome());
 
@@ -77,6 +78,19 @@ class WelcomeScreen extends StatelessWidget {
                 label: Text('Check In'),
                 icon: Icon(Icons.chevron_right),
                 // ButtonStyle (backgroundColor: Color.fromARGB(23, 2, 2, 2))
+              ),
+
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
+                child: OutlinedButton.icon(
+                  onPressed: () => {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => FAQ()))
+                  },
+                  label: Text('FAQ'),
+                  icon: Icon(Icons.chevron_right),
+                  // ButtonStyle (backgroundColor: Color.fromARGB(23, 2, 2, 2))
+                ),
               ),
             ],
           ),
