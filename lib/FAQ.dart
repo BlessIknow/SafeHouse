@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
+import 'package:safe_house_app/welcome.dart';
 
 class Flashcard {
   final String question;
@@ -68,8 +69,18 @@ class _MyAppState extends State<FAQ> {
       ),
       home: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: true,
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Welcome()));
+            },
+            child: Icon(
+              Icons.arrow_back, // add custom icons also
+            ),
+          ),
           backgroundColor: Colors.teal,
-          title: Text("FAQ"),
+          title: Center(child: Text("FAQ")),
         ),
         body: Center(
           child: Column(
