@@ -7,9 +7,9 @@ import 'dart:typed_data';
 
 import 'package:safe_house_app/UserProfile.dart';
 
-void main() {
-  runApp(CreatProfile());
-}
+// void main() {
+//   runApp(CreatProfile());
+// }
 
 class CreatProfile extends StatelessWidget {
   const CreatProfile({super.key});

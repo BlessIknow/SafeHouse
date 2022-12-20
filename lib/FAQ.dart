@@ -32,9 +32,9 @@ class FlashcardView extends StatelessWidget {
   }
 }
 
-void main() {
-  runApp(FAQ());
-}
+// void main() {
+//   runApp(FAQ());
+// }
 
 class FAQ extends StatefulWidget {
   @override
